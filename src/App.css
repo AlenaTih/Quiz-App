@@ -4,6 +4,14 @@
 
 /* Typography and icons */
 
+.question p {
+  margin: 0.5rem 0;
+}
+
+.answers p {
+  margin: 0.5rem;
+}
+
 
 /* Layout */
 
@@ -18,15 +26,25 @@
   padding: 0;
 }
 
-.start,
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 2.5rem;
+}
+
 .questions {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 100vh; */
   width: 100%;
   padding: 2.5rem;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .questions-container {
@@ -34,7 +52,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 }
 
@@ -43,12 +61,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Buttons */
 
+.check-button {
+  margin-top: 2rem;
+}
 
 /* Images */
 

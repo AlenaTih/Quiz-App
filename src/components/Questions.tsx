@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Question from "./Question.tsx"
 
 function Questions() {
     const [questions, setQuestions] = useState([])
@@ -8,21 +9,20 @@ function Questions() {
             .then(response => response.json())
             .then(data => setQuestions(data.results))
 
-        // console.log(questions)
-
         return () => {
             setQuestions([])
         }
 
     }, [])
 
-    const questionElements = questions.map((question: any) => {
+    const questionElements = questions?.map((question: any) => {
         return (
-            <div className="question" key={question.question}>
-                <h4>{question.question}</h4>
-                <p>{question.correct_answer}</p>
-                <p>{question.incorrect_answers.join(", ")}</p>
-            </div>
+            <Question
+                key={question.question}
+                question={question.question}
+                correctAnswer={question.correct_answer}
+                incorrectAnswers={question.incorrect_answers}
+            />
         )
     })
 
