@@ -1,0 +1,98 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.5;
+  /* font-weight: 400; */
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  /* Dark mode */
+  --text-color-light: rgba(255, 255, 255, 0.87);
+  --background-color-dark: #242424;
+
+  /* Light mode */
+  --text-color-dark: #2A303C;
+  --background-color-light: whitesmoke;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+#root,
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* #root {
+  text-align: center;
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+} */
+
+/* body {
+  display: flex;
+  min-height: 100vh;
+} */
+
+.dark-mode {
+  /* color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  color: var(--text-color-light);
+  background-color: var(--background-color-dark);
+}
+
+.light-mode {
+  /* color: #2A303C;
+  background-color: whitesmoke; */
+
+  color: var(--text-color-dark);
+  background-color: var(--background-color-light);
+}
+
+/* Typography and icons */
+
+
+/* Layout */
+
+
+/* Buttons */
+
+
+/* Images */
+
+
+/* Links */
+
+
+/* Media queries */
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: whitesmoke;
+  }
+} */
+
+/* @media (width >= 600px) */
+@media (min-width: 600px) {
+  
+}
