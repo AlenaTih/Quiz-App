@@ -1,18 +1,35 @@
 import { useState, useEffect } from "react"
 import Question from "./Question.tsx"
 
+interface QuestionType {
+    question: string;
+    correct_answer: string;
+    incorrect_answers: string[];
+}
+
 function Questions() {
-    const [questions, setQuestions] = useState([])
+    const [questions, setQuestions] = useState<QuestionType[]>([])
 
     useEffect(() => {
-        fetch("https://opentdb.com/api.php?amount=5&category=17&type=multiple")
-            .then(response => response.json())
+        const controller = new AbortController()
+
+        fetch("https://opentdb.com/api.php?amount=5&category=17&type=multiple", { signal: controller.signal })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not okay")
+                }
+                return response.json()
+            })
             .then(data => setQuestions(data.results))
+            .catch(error => {
+                if (error.name !== "AbortError") {
+                    console.error("Fetch errror:", error)
+                }
+            })
 
         return () => {
-            setQuestions([])
+            controller.abort()
         }
-
     }, [])
 
     const questionElements = questions?.map((question: any) => {
