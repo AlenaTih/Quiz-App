@@ -72,6 +72,15 @@
   justify-content: center;
 }
 
+label {
+  margin-left: 1rem;
+}
+
+/* input.answer-option:checked + label {
+  color: whitesmoke;
+  background-color: cornflowerblue;
+} */
+
 /* Buttons */
 
 .check-button {

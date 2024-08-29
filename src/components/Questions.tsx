@@ -46,10 +46,12 @@ function Questions() {
     return (
         <div className="questions">
             <h1>Questions</h1>
-            <div className="questions-container">
-                {questionElements}
-            </div>
-            <button className="check-button">Check answers</button>
+            {/* <form> */}
+                <div className="questions-container">
+                    {questionElements}
+                </div>
+                <button className="check-button">Check answers</button>
+            {/* </form> */}
         </div>
     )
 }

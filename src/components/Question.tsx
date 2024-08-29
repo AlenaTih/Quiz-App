@@ -12,9 +12,9 @@ function Question(props: any) {
     return (
         <div className="question">
             <h4>{props.question}</h4>
-            <div className="answers">
+            <form className="answers">
                 {answerElements}
-            </div>
+            </form>
         </div>
     )
 }
