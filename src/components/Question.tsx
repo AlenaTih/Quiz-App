@@ -1,11 +1,10 @@
-// import { useState } from "react"
+import { useState } from "react"
 
 function Question(props: any) {
     // const [formData, setFormData] = useState({
     //     answer: ""
     // })
-
-    // const id = React.useId()
+    const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
     // function handleChange(event: any) {
     //     setFormData(prevFormData => {
@@ -19,27 +18,47 @@ function Question(props: any) {
     function handleChange(event: any) {
         console.log(event.target.value)
 
+        setSelectedAnswer(event.target.value)
+
         if (event.target.value === props.correctAnswer) {
             console.log("Yay!")
         }
     }
 
-    const answersArray = [...props.incorrectAnswers, props.correctAnswer]
+    const answersArray = [...props.incorrectAnswers, props.correctAnswer].sort(() => {
+        return Math.random() - 0.5
+    })
 
-    const answerElements = answersArray.map((answer: any) => (
-        <label key={answer}>
+    const answerElements = answersArray.map((answer: string) => {
+        let backgroundColor = ""
+
+        // If answers are shown (the checkAnswers button is clicked),
+        // highlight correct and incorrect answers
+        if (props.showAnswers) {
+            if (answer === props.correctAnswer) {
+                backgroundColor = "green"
+            } else if (answer === selectedAnswer) {
+                backgroundColor = "red"
+            }
+        } else if (answer === selectedAnswer) {
+            // Highlight selected answer before checking
+            backgroundColor = "cornflowerblue"
+        }
+
+        return (<label
+            key={answer}
+            style={{ backgroundColor }}>
             {answer}
             <input
                 className="answer-option"
                 onChange={handleChange}
-                // id={`${id}-answer`}
                 type="radio"
                 value={answer}
-                // checked={formData.answer === answer}
-                // checked={answer}
-                name="answer" />
+                checked={selectedAnswer === answer}
+                name={props.question} />
         </label>
-    ))
+        )
+    })
 
     return (
         <div className="question">

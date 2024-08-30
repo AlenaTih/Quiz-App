@@ -9,6 +9,7 @@ interface QuestionType {
 
 function Questions() {
     const [questions, setQuestions] = useState<QuestionType[]>([])
+    const [showAnswers, setShowAnswers] = useState(false)
 
     useEffect(() => {
         const controller = new AbortController()
@@ -39,9 +40,14 @@ function Questions() {
                 question={question.question}
                 correctAnswer={question.correct_answer}
                 incorrectAnswers={question.incorrect_answers}
+                showAnswers={showAnswers}
             />
         )
     })
+
+    function checkAnswers() {
+        setShowAnswers(true)
+    }
 
     return (
         <div className="questions">
@@ -49,7 +55,11 @@ function Questions() {
             <div className="questions-container">
                 {questionElements}
             </div>
-            <button className="check-button">Check answers</button>
+            <button
+                className="check-button"
+                onClick={checkAnswers}>
+                Check answers
+            </button>
         </div>
     )
 }
