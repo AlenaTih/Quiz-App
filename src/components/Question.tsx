@@ -16,11 +16,11 @@ function Question(props: any) {
     // }
 
     function handleChange(event: any) {
-        console.log(event.target.value)
+        const answer = event.target.value
+        setSelectedAnswer(answer)
+        props.onAnswer(answer) // Pass the selected answer to the parent component
 
-        setSelectedAnswer(event.target.value)
-
-        if (event.target.value === props.correctAnswer) {
+        if (answer === props.correctAnswer) {
             console.log("Yay!")
         }
     }

@@ -5,11 +5,13 @@ interface QuestionType {
     question: string;
     correct_answer: string;
     incorrect_answers: string[];
+    userAnswer?: string;
 }
 
 function Questions() {
     const [questions, setQuestions] = useState<QuestionType[]>([])
     const [showAnswers, setShowAnswers] = useState(false)
+    const [score, setScore] = useState<number | null>(null)
 
     useEffect(() => {
         const controller = new AbortController()
@@ -33,7 +35,21 @@ function Questions() {
         }
     }, [])
 
-    const questionElements = questions?.map((question: any) => {
+    function checkAnswers() {
+        let correctCount = 0
+
+        questions.forEach((question: QuestionType) => {
+            const userAnswer = question.userAnswer
+            if (userAnswer === question.correct_answer) {
+                correctCount += 1
+            }
+        })
+
+        setScore(correctCount)
+        setShowAnswers(true)
+    }
+
+    const questionElements = questions?.map((question: any, index: number) => {
         return (
             <Question
                 key={question.question}
@@ -41,13 +57,14 @@ function Questions() {
                 correctAnswer={question.correct_answer}
                 incorrectAnswers={question.incorrect_answers}
                 showAnswers={showAnswers}
+                onAnswer={(userAnswer: string) => {
+                    const updatedQuestions = [...questions]
+                    updatedQuestions[index] = {...question, userAnswer}
+                    setQuestions(updatedQuestions)
+                }}
             />
         )
     })
-
-    function checkAnswers() {
-        setShowAnswers(true)
-    }
 
     return (
         <div className="questions">
@@ -60,6 +77,9 @@ function Questions() {
                 onClick={checkAnswers}>
                 Check answers
             </button>
+            {score !== null && (
+                <h4>You scored {score}/{questions.length} correct answers</h4>
+            )}
         </div>
     )
 }
