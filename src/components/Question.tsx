@@ -26,10 +26,6 @@ function Question(props: any) {
         }
     }
 
-    // const answersArray = [...props.incorrectAnswers, props.correctAnswer].sort(() => {
-    //     return Math.random() - 0.5
-    // })
-
     const answersArray = [...props.incorrectAnswers, props.correctAnswer].sort()
 
     const answerElements = answersArray.map((answer: string) => {
