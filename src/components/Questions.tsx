@@ -12,6 +12,7 @@ function Questions() {
     const [questions, setQuestions] = useState<QuestionType[]>([])
     const [showAnswers, setShowAnswers] = useState(false)
     const [score, setScore] = useState<number | null>(null)
+    const [newGame, setNewGame] = useState(false)
 
     useEffect(() => {
         const controller = new AbortController()
@@ -33,7 +34,7 @@ function Questions() {
         return () => {
             controller.abort()
         }
-    }, [])
+    }, [newGame])
 
     function checkAnswers() {
         let correctCount = 0
@@ -47,6 +48,12 @@ function Questions() {
 
         setScore(correctCount)
         setShowAnswers(true)
+    }
+
+    function startNewGame() {
+        setShowAnswers(false)
+        setScore(null)
+        setNewGame(true)
     }
 
     const questionElements = questions?.map((question: any, index: number) => {
@@ -72,11 +79,18 @@ function Questions() {
             <div className="questions-container">
                 {questionElements}
             </div>
-            <button
-                className="check-button"
-                onClick={checkAnswers}>
-                Check answers
-            </button>
+            {!showAnswers ?
+                <button
+                    className="check-button"
+                    onClick={checkAnswers}>
+                    Check answers
+                </button> :
+                <button
+                    className="play-again-button"
+                    onClick={startNewGame}>
+                    Play again
+                </button>
+            }
             {score !== null && (
                 <h4>You scored {score}/{questions.length} correct answers</h4>
             )}
