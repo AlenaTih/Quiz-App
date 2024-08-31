@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { decode } from "html-entities"
 
 function Question(props: any) {
     // const [formData, setFormData] = useState({
@@ -47,24 +48,25 @@ function Question(props: any) {
             backgroundColor = "cornflowerblue"
         }
 
-        return (<label
-            key={answer}
-            style={{ backgroundColor }}>
-            {answer}
-            <input
-                className="answer-option"
-                onChange={handleChange}
-                type="radio"
-                value={answer}
-                checked={selectedAnswer === answer}
-                name={props.question} />
-        </label>
+        return (
+            <label
+                key={answer}
+                style={{ backgroundColor }}>
+                {decode(answer)}
+                <input
+                    className="answer-option"
+                    onChange={handleChange}
+                    type="radio"
+                    value={decode(answer)}
+                    checked={selectedAnswer === answer}
+                    name={props.question} />
+            </label>
         )
     })
 
     return (
         <div className="question">
-            <h4>{props.question}</h4>
+            <h4>{decode(props.question)}</h4>
             <form className="answers">
                 {answerElements}
             </form>
