@@ -30,24 +30,33 @@ function Question(props: any) {
 
     const answerElements = answersArray.map((answer: string) => {
         let backgroundColor = ""
+        let border = ""
 
         // If answers are shown (the checkAnswers button is clicked),
         // highlight correct and incorrect answers
         if (props.showAnswers) {
             if (answer === props.correctAnswer) {
                 backgroundColor = "green"
+                border = "none"
             } else if (answer === selectedAnswer) {
                 backgroundColor = "red"
+                border = "none"
+            } else {
+                border = "1px solid gray"
             }
         } else if (answer === selectedAnswer) {
             // Highlight selected answer before checking
             backgroundColor = "cornflowerblue"
+            border = "none"
+        } else {
+            border = "1px solid gray"
         }
 
         return (
             <label
+                className="answer-label"
                 key={answer}
-                style={{ backgroundColor }}>
+                style={{ backgroundColor, border }}>
                 {decode(answer)}
                 <input
                     className="answer-option"

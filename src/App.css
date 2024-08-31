@@ -72,17 +72,17 @@
   justify-content: center;
 }
 
-label {
-  background-color: whitesmoke;
-  margin-left: 1rem;
+.answer-label {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 /* input.answer-option:checked + label {
-  color: whitesmoke;
-  background-color: cornflowerblue;
-} */
-
-/* .checked {
   color: whitesmoke;
   background-color: cornflowerblue;
 } */
