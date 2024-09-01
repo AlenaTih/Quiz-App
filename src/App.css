@@ -69,17 +69,23 @@
 .answers {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 .answer-label {
   padding: 0.5rem 1rem;
   margin: 1rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
-input[type="radio"] {
-  display: none;
+.answer-label:hover {
+  background-color: #B4C4FC;
 }
 
 /* input.answer-option:checked + label {
