@@ -78,21 +78,24 @@ function Questions() {
             <div className="questions-container">
                 {questionElements}
             </div>
-            {!showAnswers ?
-                <button
-                    className="check-button"
-                    onClick={checkAnswers}>
-                    Check answers
-                </button> :
-                <button
-                    className="play-again-button"
-                    onClick={startNewGame}>
-                    Play again
-                </button>
-            }
-            {score !== null && (
-                <h4>You scored {score}/{questions.length} correct answers</h4>
-            )}
+
+            <div className="buttons-score-container">
+                {score !== null && (
+                        <h4 className="score-text">You scored {score}/{questions.length} correct answers</h4>
+                    )}
+                {!showAnswers ?
+                    <button
+                        className="check-button"
+                        onClick={checkAnswers}>
+                        Check answers
+                    </button> :
+                    <button
+                        className="play-again-button"
+                        onClick={startNewGame}>
+                        Play again
+                    </button>
+                }
+            </div>
         </div>
     )
 }
