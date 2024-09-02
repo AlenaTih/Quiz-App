@@ -2,7 +2,7 @@
 
 ## Overview
 
-Description.
+You can challenge yourself with a little quiz on science and nature.
 
 ## Features
 
@@ -20,13 +20,11 @@ Description.
 - CSS
 - JavaScript
 - TypeScript
-- React Router
-- Appwrite
-- Font Awesome CDN
+- Open Trivia Database API
 
 ## API
 
-This project uses the [API](link) to fetch information.
+This project uses the [Open Trivia Database API](https://opentdb.com/) to fetch questions and answers information.
 
 ## Database
 
