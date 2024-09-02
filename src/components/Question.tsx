@@ -42,14 +42,14 @@ function Question(props: any) {
                 backgroundColor = "#F8BCBC"
                 border = "none"
             } else {
-                border = "1px solid gray"
+                border = "1.4px solid #4D5B9E"
             }
         } else if (answer === selectedAnswer) {
             // Highlight selected answer before checking
             backgroundColor = "cornflowerblue"
             border = "none"
         } else {
-            border = "1px solid gray"
+            border = "1.4px solid #4D5B9E"
         }
 
         return (
@@ -64,7 +64,8 @@ function Question(props: any) {
                     type="radio"
                     value={decode(answer)}
                     checked={selectedAnswer === answer}
-                    name={props.question} />
+                    name={props.question}
+                    disabled={props.showAnswers} />
             </label>
         )
     })
