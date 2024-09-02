@@ -4,6 +4,11 @@
 
 /* Typography and icons */
 
+.question-text {
+  padding: 0;
+  margin: 0;
+}
+
 .question p {
   margin: 0.5rem 0;
 }
@@ -60,12 +65,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   /* height: 100%; */
   width: 100%;
-  padding: 1rem 0;
-  margin: 1rem 0 0;
-  border-top: 1px solid #DBDEF0;
+  padding: 1rem 0 2rem;
+  margin: 1rem auto 0;
+  border-bottom: 1px solid #DBDEF0;
 }
 
 .answers {
@@ -83,7 +88,7 @@ input[type="radio"] {
 
 .answer-label {
   padding: 0.5rem 1rem;
-  margin: 0 1rem;
+  margin: 1rem 1rem 0 0;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -100,6 +105,10 @@ input[type="radio"] {
 /* Buttons */
 
 .check-button {
+  margin-top: 2rem;
+}
+
+.play-again-button {
   margin-top: 2rem;
 }
 
@@ -120,6 +129,10 @@ input[type="radio"] {
 
 .questions {
   padding: 2.5rem 2.5rem 7.5rem;
+}
+
+.questions-container {
+  width: 60%;
 }
 
 /* Buttons */

@@ -71,7 +71,7 @@ function Question(props: any) {
 
     return (
         <div className="question">
-            <h4>{decode(props.question)}</h4>
+            <h4 className="question-text">{decode(props.question)}</h4>
             <form className="answers">
                 {answerElements}
             </form>
