@@ -26,10 +26,6 @@ You can challenge yourself with a little quiz on science and nature.
 
 This project uses the [Open Trivia Database API](https://opentdb.com/) to fetch questions and answers information.
 
-## Database
-
-Data is stored in the Appwrite Database.
-
 ## Contributors
 
 - Alena Tikhomirova
