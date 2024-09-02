@@ -4,6 +4,17 @@
 
 /* Typography and icons */
 
+.start-title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.start-text {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .question-text {
   padding: 0;
   margin: 0;
@@ -112,9 +123,9 @@ input[type="radio"] {
   color: whitesmoke;
   background-color: #2E5CB5;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.125rem;
   padding: 1rem 2rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   border: none;
   border-radius: 0.625rem;
   cursor: pointer;
@@ -160,6 +171,14 @@ input[type="radio"] {
 @media (min-width: 600px) {
   /* Typography and icons */
 
+  .start-title {
+    font-size: 2.5rem;
+  }
+
+  .start-text {
+    font-size: 1.25rem;
+  }
+
   .score-text {
     padding: 0;
     margin: 0 2.5rem 0 0;
@@ -178,6 +197,9 @@ input[type="radio"] {
 
 /* Buttons */
 
+.start-button {
+  font-size: 1.25rem;
+}
 
 /* Images */
 
