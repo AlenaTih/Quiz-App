@@ -115,6 +115,17 @@ input[type="radio"] {
 
 /* Buttons */
 
+.start-button {
+  color: whitesmoke;
+  background-color: #2E5CB5;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.625rem;
+  cursor: pointer;
+}
+
 .check-button {
   color: whitesmoke;
   background-color: #2E5CB5;
@@ -139,6 +150,7 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.start-button:hover,
 .check-button:hover,
 .play-again-button:hover {
   background-color: #4B6BDC;
