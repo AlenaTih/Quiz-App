@@ -36,10 +36,10 @@ function Question(props: any) {
         // highlight correct and incorrect answers
         if (props.showAnswers) {
             if (answer === props.correctAnswer) {
-                backgroundColor = "green"
+                backgroundColor = "#94D7A2"
                 border = "none"
             } else if (answer === selectedAnswer) {
-                backgroundColor = "red"
+                backgroundColor = "#F8BCBC"
                 border = "none"
             } else {
                 border = "1px solid gray"

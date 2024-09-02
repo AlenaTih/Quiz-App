@@ -43,7 +43,7 @@
   align-items: center;
   /* height: 100vh; */
   width: 100%;
-  padding: 2.5rem;
+  padding: 2.5rem 2rem 4.5rem;
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
@@ -63,14 +63,18 @@
   align-items: center;
   /* height: 100%; */
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 1rem 0;
+  margin: 1rem 0 0;
+  border-top: 1px solid #DBDEF0;
 }
 
 .answers {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
 input[type="radio"] {
@@ -79,7 +83,7 @@ input[type="radio"] {
 
 .answer-label {
   padding: 0.5rem 1rem;
-  margin: 1rem;
+  margin: 0 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -109,5 +113,20 @@ input[type="radio"] {
 
 /* @media (width >= 600px) */
 @media (min-width: 600px) {
-  
+  /* Typography and icons */
+
+
+/* Layout */
+
+.questions {
+  padding: 2.5rem 2.5rem 7.5rem;
+}
+
+/* Buttons */
+
+
+/* Images */
+
+
+/* Links */
 }
