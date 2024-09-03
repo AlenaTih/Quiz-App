@@ -10,8 +10,9 @@
 }
 
 .start-text {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   text-align: center;
+  font-weight: 700;
   margin-top: 2rem;
 }
 
@@ -138,6 +139,7 @@ input[type="radio"] {
   background-color: #2E5CB5;
   font-family: inherit;
   font-size: 1.125rem;
+  font-weight: 700;
   padding: 1rem 2rem;
   margin-top: 2.5rem;
   border: none;
@@ -150,6 +152,7 @@ input[type="radio"] {
   background-color: #2E5CB5;
   font-family: inherit;
   font-size: 1rem;
+  font-weight: 550;
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.625rem;
@@ -161,6 +164,7 @@ input[type="radio"] {
   background-color: #2E5CB5;
   font-family: inherit;
   font-size: 1rem;
+  font-weight: 550;
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.625rem;
@@ -194,7 +198,7 @@ input[type="radio"] {
   }
 
   .start-text {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .score-text {
@@ -202,33 +206,34 @@ input[type="radio"] {
     margin: 0 2.5rem 0 0;
   }
 
-/* Layout */
+  /* Layout */
 
-.start {
-  padding: 0 2.5rem 4.5rem;
-}
+  .start {
+    padding: 0 2.5rem 4.5rem;
+  }
 
-.questions {
-  padding: 2.5rem 2.5rem 7.5rem;
-}
+  .questions {
+    padding: 2.5rem 2.5rem 7.5rem;
+  }
 
-.questions-container,
-.buttons-score-container {
-  width: 60%;
-}
+  .questions-container,
+  .buttons-score-container {
+    width: 60%;
+  }
 
-.reaction-container {
-  width: 25%;
-}
+  .reaction-container {
+    width: 25%;
+  }
 
-/* Buttons */
+  /* Buttons */
 
-.start-button {
-  font-size: 1.25rem;
-}
+  .start-button {
+    font-size: 1.25rem;
+  }
 
-/* Images */
+  /* Images */
 
 
-/* Links */
+  /* Links */
+  
 }
