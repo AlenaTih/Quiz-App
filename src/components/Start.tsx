@@ -6,7 +6,7 @@ function Start(props: StartProps) {
 
     return (
         <div className="start">
-            <h1 className="start-title">Quizzical</h1>
+            <h1 className="start-title">Quiz App</h1>
             <p className="start-text">Are you ready for a challenge?</p>
             <button
                 className="start-button"
