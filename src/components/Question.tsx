@@ -71,7 +71,7 @@ function Question(props: QuestionProps) {
                     onChange={handleChange}
                     type="radio"
                     value={decode(answer)}
-                    checked={selectedAnswer === answer}
+                    checked={selectedAnswer === decode(answer)}
                     name={props.question}
                     disabled={props.showAnswers} />
             </label>
