@@ -50,7 +50,7 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding: 2.5rem;
+  padding: 0 2.5rem 2.5rem;
 }
 
 .questions {
