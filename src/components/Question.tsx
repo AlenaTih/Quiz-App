@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, ChangeEvent } from "react"
 import { decode } from "html-entities"
 
 interface QuestionProps {
@@ -24,7 +24,7 @@ function Question(props: QuestionProps) {
     //     })
     // }
 
-    function handleChange(event: any) {
+    function handleChange(event: ChangeEvent<HTMLInputElement>) {
         const answer = event.target.value
         setSelectedAnswer(answer)
         props.onAnswer(answer) // Pass the selected answer to the parent component
