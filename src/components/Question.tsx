@@ -70,8 +70,8 @@ function Question(props: QuestionProps) {
                     className="answer-option"
                     onChange={handleChange}
                     type="radio"
-                    value={decode(answer)}
-                    checked={selectedAnswer === decode(answer)}
+                    value={answer}
+                    checked={selectedAnswer === answer}
                     name={props.question}
                     disabled={props.showAnswers} />
             </label>
