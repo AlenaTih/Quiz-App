@@ -21,6 +21,7 @@ You can challenge yourself with a little quiz on science and nature.
 - JavaScript
 - TypeScript
 - Open Trivia Database API
+- Html Entities library
 
 ## API
 

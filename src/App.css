@@ -123,6 +123,14 @@ input[type="radio"] {
   margin-top: 4.5rem;
 }
 
+.reaction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 /* Buttons */
 
 .start-button {
@@ -167,6 +175,10 @@ input[type="radio"] {
 
 /* Images */
 
+.congratulations-cat-gif,
+.you-can-do-it-cat-gif {
+  width: 100%;
+}
 
 /* Links */
 
@@ -203,6 +215,10 @@ input[type="radio"] {
 .questions-container,
 .buttons-score-container {
   width: 60%;
+}
+
+.reaction-container {
+  width: 25%;
 }
 
 /* Buttons */

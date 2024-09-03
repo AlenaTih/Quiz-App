@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react"
 import Question from "./Question.tsx"
+import CongratulationsCat from "../assets/congratulations-cat.webp"
+import YouCanDoItCat from "../assets/you-can-do-it-cat.webp"
 
 interface QuestionType {
     question: string;
@@ -97,6 +99,15 @@ function Questions() {
                         onClick={startNewGame}>
                         Play again
                     </button>
+                }
+            </div>
+
+            <div className="reaction-container">
+                {score === 5 &&
+                    (<img className="congratulations-cat-gif" src={CongratulationsCat}></img>)
+                }
+                {score === 0 &&
+                    (<img className="you-can-do-it-cat-gif" src={YouCanDoItCat}></img>)
                 }
             </div>
         </div>
