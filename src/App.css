@@ -50,7 +50,7 @@
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding: 0 2.5rem 2.5rem;
+  padding: 0 2.5rem 7.5rem;
 }
 
 .questions {
@@ -191,6 +191,10 @@ input[type="radio"] {
   }
 
 /* Layout */
+
+.start {
+  padding: 0 2.5rem 4.5rem;
+}
 
 .questions {
   padding: 2.5rem 2.5rem 7.5rem;
