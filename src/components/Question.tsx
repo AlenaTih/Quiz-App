@@ -1,7 +1,15 @@
 import { useState } from "react"
 import { decode } from "html-entities"
 
-function Question(props: any) {
+interface QuestionProps {
+    question: string;
+    correctAnswer: string;
+    incorrectAnswers: string[];
+    showAnswers: boolean;
+    onAnswer: (answer: string) => void;
+}
+
+function Question(props: QuestionProps) {
     // const [formData, setFormData] = useState({
     //     answer: ""
     // })

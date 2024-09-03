@@ -1,4 +1,8 @@
-function Start(props: any) {
+interface StartProps {
+    startQuiz: () => void;
+}
+
+function Start(props: StartProps) {
 
     return (
         <div className="start">

@@ -3,10 +3,28 @@ import Question from "./Question.tsx"
 import CongratulationsCat from "../assets/congratulations-cat.webp"
 import YouCanDoItCat from "../assets/you-can-do-it-cat.webp"
 
-interface QuestionType {
+interface ApiResponse {
+    response_code: number;
+    results: ApiQuestion[];
+}
+
+interface ApiQuestion {
+    category: string;
+    type: string;
+    difficulty: string;
     question: string;
     correct_answer: string;
     incorrect_answers: string[];
+}
+
+// interface QuestionType {
+//     question: string;
+//     correct_answer: string;
+//     incorrect_answers: string[];
+//     userAnswer?: string;
+// }
+
+interface QuestionType extends ApiQuestion {
     userAnswer?: string;
 }
 
@@ -26,7 +44,13 @@ function Questions() {
                 }
                 return response.json()
             })
-            .then(data => setQuestions(data.results))
+            .then((data: ApiResponse) => {
+                // console.log(data)
+                const newQuestions: QuestionType[] = data.results.map((question) => ({
+                    ...question,
+                    userAnswer: ""
+                }))
+                setQuestions(newQuestions)})
             .catch(error => {
                 if (error.name !== "AbortError") {
                     console.error("Fetch errror:", error)
@@ -58,7 +82,7 @@ function Questions() {
         setNewGame(true)
     }
 
-    const questionElements = questions?.map((question: any, index: number) => {
+    const questionElements = questions?.map((question: QuestionType, index: number) => {
         return (
             <Question
                 key={question.question}
