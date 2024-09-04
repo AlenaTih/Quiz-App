@@ -29,9 +29,9 @@ function Question(props: QuestionProps) {
         setSelectedAnswer(answer)
         props.onAnswer(answer) // Pass the selected answer to the parent component
 
-        if (answer === props.correctAnswer) {
-            console.log("Yay!")
-        }
+        // if (answer === props.correctAnswer) {
+        //     console.log("Yay!")
+        // }
     }
 
     const answersArray = [...props.incorrectAnswers, props.correctAnswer].sort()
