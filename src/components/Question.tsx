@@ -10,19 +10,7 @@ interface QuestionProps {
 }
 
 function Question(props: QuestionProps) {
-    // const [formData, setFormData] = useState({
-    //     answer: ""
-    // })
     const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-
-    // function handleChange(event: any) {
-    //     setFormData(prevFormData => {
-    //         return {
-    //             ...prevFormData,
-    //             [event.target.name]: event.target.value
-    //         }
-    //     })
-    // }
 
     function handleChange(event: ChangeEvent<HTMLInputElement>) {
         const answer = event.target.value
