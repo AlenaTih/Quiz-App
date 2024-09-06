@@ -17,13 +17,6 @@ interface ApiQuestion {
     incorrect_answers: string[];
 }
 
-// interface QuestionType {
-//     question: string;
-//     correct_answer: string;
-//     incorrect_answers: string[];
-//     userAnswer?: string;
-// }
-
 interface QuestionType extends ApiQuestion {
     userAnswer?: string;
 }
