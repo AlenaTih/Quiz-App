@@ -4,14 +4,6 @@
 
 An app where you can challenge yourself with a little quiz about science and nature.
 
-<!-- ## Features
-
-- **Feature:** description.
-
-## Usage
-
-1. Usage. -->
-
 ## Technologies Used
 
 - React
